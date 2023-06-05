@@ -18,10 +18,12 @@ exports.createUser = async (req, res) => {
   };
   await request(options).then(function (data) {
     console.log(data);
+    res.send(data);
 
   })
   .catch(function (err) {
     console.log(err);
+    res.send(err);
   });
 
 };
